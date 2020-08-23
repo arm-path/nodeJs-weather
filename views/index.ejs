@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+    <div class="weather_container">
+        <div class="weather_header">
+            <% if (weather) { %>
+                <h1 class = "weather_header_title"><%=weather%></h1>
+            <% } %>
+
+            <% if (error) { %>
+                <div class="weather_header_error"><%=error%></div>
+            <% } %>
+        </div>
+        <form class="weather_content" action="/" method="POST" >
+            <div class="weather_content_container">
+                <label for="city">Напишите город:</label>
+                <input type="text" id = "city" name = "city">
+            </div>
+            <button type="submit" class="weather_content_btn">Показать погоду</button>
+        </form>
+    </div>
+</body>
+</html>
